@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  /* Dark Green Theme Colors */
+  --color-bg-primary: #0a0f0a;
+  --color-bg-secondary: #131a13;
+  --color-bg-card: #1a241a;
+  --color-text-primary: #e4f0e4;
+  --color-text-secondary: #a1b0a1;
+  --color-border: #272a27;
+  --color-accent: #28a745;
+  --color-accent-hover: #1e7e34;
+
+  /* Dark Green Gradients */
+  --bg-custom-gradient: linear-gradient(135deg, #0f5132 0%, #198754 100%);
+  --bg-custom-gradient-2: linear-gradient(135deg, #198754 0%, #20c997 100%);
+  --bg-card-gradient: linear-gradient(135deg, #155724 0%, #28a745 100%);
+  --bg-hero-gradient: linear-gradient(135deg, rgba(15, 81, 50, 0.1) 0%, rgba(25, 135, 84, 0.1) 100%);
+
+  /* Shadows - Enhanced for dark green theme */
+  --shadow-custom: 0 0 30px rgba(40, 167, 69, 0.15);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 8px 30px rgba(40, 167, 69, 0.25);
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
